@@ -1,0 +1,450 @@
+import React, { useState } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { createClient } from "@supabase/supabase-js";
+import { v4 as uuidv4 } from "uuid";
+
+/**
+ * Process Mapping App
+ * -------------------------------------------------
+ * • Front‑end: React + Tailwind + shadcn/ui
+ * • Back‑end: Supabase (PostgreSQL + REST) – easy to swap with any API
+ * -------------------------------------------------
+ * ENV VARIABLES REQUIRED
+ * VITE_SUPABASE_URL=<your‑supabase‑url>
+ * VITE_SUPABASE_ANON_KEY=<your‑supabase‑anon‑key>
+ * -------------------------------------------------
+ * DB SCHEMA (SQL)
+ * create table process_overview ( id uuid primary key, data jsonb, created_at timestamptz default now() );
+ * create table process_steps ( id uuid primary key, process_id uuid references process_overview(id), step_no int, data jsonb );
+ * create table metrics_baseline ( id uuid primary key, process_id uuid, data jsonb );
+ * create table ai_ideas ( id uuid primary key, process_id uuid, data jsonb );
+ * create table validation_log ( id uuid primary key, process_id uuid, data jsonb );
+ */
+
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+// --------------------- Type Definitions ---------------------
+interface ProcessOverview {
+  process_id: string;
+  process_name: string;
+  objective: string;
+  owner: string;
+  trigger: string;
+  frequency: string;
+  stakeholders: string;
+  systems: string;
+  inputs: string;
+  outputs: string;
+  kpis: string;
+  pain_points: string;
+  ai_idea: string;
+  notes: string;
+}
+
+interface ProcessStep {
+  step_no: number;
+  actor: string;
+  description: string;
+  input: string;
+  output: string;
+  tool: string;
+  duration: string;
+  issues: string;
+}
+
+interface Metric {
+  metric_name: string;
+  unit: string;
+  baseline: string;
+  method: string;
+  date: string;
+}
+
+interface AIIdea {
+  title: string;
+  description: string;
+  benefit: string;
+  complexity: "Low" | "Med" | "High";
+  priority: 1 | 2 | 3;
+}
+
+interface ValidationEntry {
+  reviewer: string;
+  date: string;
+  comments: string;
+  confirmed: boolean;
+}
+
+// --------------------- Main Component ---------------------
+export default function ProcessMappingApp() {
+  // Overall IDs
+  const [processId, setProcessId] = useState<string>(uuidv4());
+
+  // Process Overview State
+  const [ov, setOv] = useState<ProcessOverview>({
+    process_id: "",
+    process_name: "",
+    objective: "",
+    owner: "",
+    trigger: "",
+    frequency: "",
+    stakeholders: "",
+    systems: "",
+    inputs: "",
+    outputs: "",
+    kpis: "",
+    pain_points: "",
+    ai_idea: "",
+    notes: "",
+  });
+
+  // Collections
+  const [steps, setSteps] = useState<ProcessStep[]>([]);
+  const [metrics, setMetrics] = useState<Metric[]>([]);
+  const [aiIdeas, setAiIdeas] = useState<AIIdea[]>([]);
+  const [validations, setValidations] = useState<ValidationEntry[]>([]);
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState<string | null>(null);
+
+  // --------------------- Handlers ---------------------
+  const handleOvChange = (field: keyof ProcessOverview, value: string) => {
+    setOv(prev => ({ ...prev, [field]: value }));
+  };
+
+  const addStep = (step: ProcessStep) => setSteps([...steps, step]);
+  const addMetric = (m: Metric) => setMetrics([...metrics, m]);
+  const addIdea = (idea: AIIdea) => setAiIdeas([...aiIdeas, idea]);
+  const addValidation = (v: ValidationEntry) => setValidations([...validations, v]);
+
+  const saveAll = async () => {
+    setLoading(true);
+    setMessage(null);
+
+    try {
+      // Insert Process Overview
+      const { error: ovErr } = await supabase.from("process_overview").insert({
+        id: processId,
+        data: { ...ov, process_id: processId },
+      });
+      if (ovErr) throw ovErr;
+
+      // Insert Steps
+      if (steps.length) {
+        const stepsPayload = steps.map(s => ({
+          id: uuidv4(),
+          process_id: processId,
+          step_no: s.step_no,
+          data: s,
+        }));
+        const { error: stErr } = await supabase.from("process_steps").insert(stepsPayload);
+        if (stErr) throw stErr;
+      }
+
+      // Insert Metrics
+      if (metrics.length) {
+        const metricsPayload = metrics.map(m => ({
+          id: uuidv4(),
+          process_id: processId,
+          data: m,
+        }));
+        const { error: mErr } = await supabase.from("metrics_baseline").insert(metricsPayload);
+        if (mErr) throw mErr;
+      }
+
+      // Insert AI Ideas
+      if (aiIdeas.length) {
+        const aiPayload = aiIdeas.map(a => ({
+          id: uuidv4(),
+          process_id: processId,
+          data: a,
+        }));
+        const { error: aiErr } = await supabase.from("ai_ideas").insert(aiPayload);
+        if (aiErr) throw aiErr;
+      }
+
+      // Insert Validation Log
+      if (validations.length) {
+        const valPayload = validations.map(v => ({
+          id: uuidv4(),
+          process_id: processId,
+          data: v,
+        }));
+        const { error: vErr } = await supabase.from("validation_log").insert(valPayload);
+        if (vErr) throw vErr;
+      }
+
+      setMessage("✅ Dati salvati con successo!");
+      // Reset form
+      setProcessId(uuidv4());
+      setOv({
+        process_id: "",
+        process_name: "",
+        objective: "",
+        owner: "",
+        trigger: "",
+        frequency: "",
+        stakeholders: "",
+        systems: "",
+        inputs: "",
+        outputs: "",
+        kpis: "",
+        pain_points: "",
+        ai_idea: "",
+        notes: "",
+      });
+      setSteps([]);
+      setMetrics([]);
+      setAiIdeas([]);
+      setValidations([]);
+    } catch (err: any) {
+      setMessage(`❌ Errore: ${err.message}`);
+    }
+
+    setLoading(false);
+  };
+
+  // --------------------- Render Helpers ---------------------
+  const renderTextInput = (field: keyof ProcessOverview, label: string, placeholder = "") => (
+    <div className="flex flex-col gap-1">
+      <Label htmlFor={field}>{label}</Label>
+      <Input
+        id={field}
+        placeholder={placeholder}
+        value={ov[field] as string}
+        onChange={e => handleOvChange(field, e.target.value)}
+      />
+    </div>
+  );
+
+  const OverviewTab = () => (
+    <Card className="w-full max-w-3xl mx-auto p-4 shadow-xl">
+      <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {renderTextInput("process_name", "Process Name")}
+        {renderTextInput("objective", "Objective / Purpose")}
+        {renderTextInput("owner", "Owner / Responsible")}
+        {renderTextInput("trigger", "Trigger (Start Event)")}
+        {renderTextInput("frequency", "Frequency")}
+        {renderTextInput("stakeholders", "Stakeholders / Actors")}
+        {renderTextInput("systems", "Systems / Tools Involved")}
+        {renderTextInput("inputs", "Key Inputs")}
+        {renderTextInput("outputs", "Key Outputs")}
+        {renderTextInput("kpis", "KPIs / Success Criteria")}
+        {renderTextInput("pain_points", "Pain Points")}
+        {renderTextInput("ai_idea", "AI Opportunity Idea")}
+        {renderTextInput("notes", "Notes")}
+      </CardContent>
+    </Card>
+  );
+
+  const StepsTab = () => {
+    const [local, setLocal] = useState<ProcessStep>({
+      step_no: steps.length + 1,
+      actor: "",
+      description: "",
+      input: "",
+      output: "",
+      tool: "",
+      duration: "",
+      issues: "",
+    });
+    const add = () => {
+      addStep(local);
+      setLocal({
+        step_no: steps.length + 2,
+        actor: "",
+        description: "",
+        input: "",
+        output: "",
+        tool: "",
+        duration: "",
+        issues: "",
+      });
+    };
+    return (
+      <div className="w-full max-w-4xl mx-auto grid gap-4">
+        <Card>
+          <CardContent className="grid md:grid-cols-3 gap-4 p-4">
+            <div>
+              <Label>Actor / Role</Label>
+              <Input value={local.actor} onChange={e => setLocal({ ...local, actor: e.target.value })} />
+            </div>
+            <div>
+              <Label>Description</Label>
+              <Input value={local.description} onChange={e => setLocal({ ...local, description: e.target.value })} />
+            </div>
+            <div>
+              <Label>Input</Label>
+              <Input value={local.input} onChange={e => setLocal({ ...local, input: e.target.value })} />
+            </div>
+            <div>
+              <Label>Output</Label>
+              <Input value={local.output} onChange={e => setLocal({ ...local, output: e.target.value })} />
+            </div>
+            <div>
+              <Label>Tool / System</Label>
+              <Input value={local.tool} onChange={e => setLocal({ ...local, tool: e.target.value })} />
+            </div>
+            <div>
+              <Label>Duration (min)</Label>
+              <Input value={local.duration} onChange={e => setLocal({ ...local, duration: e.target.value })} />
+            </div>
+            <div className="md:col-span-3">
+              <Label>Known Issues</Label>
+              <Input value={local.issues} onChange={e => setLocal({ ...local, issues: e.target.value })} />
+            </div>
+            <Button onClick={add}>Add Step</Button>
+          </CardContent>
+        </Card>
+        {/* List of added steps */}
+        {steps.length > 0 && (
+          <Card className="shadow">
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-lg font-semibold">Current Steps</h3>
+              <ul className="list-decimal pl-4 space-y-1">
+                {steps.map(s => (
+                  <li key={s.step_no} className="text-sm">
+                    <span className="font-bold">{s.step_no}. </span>{s.description} (<em>{s.actor}</em>)
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    );
+  };
+
+  // Reusable simple form component for other tabs (Metric, AI Idea, Validation)
+  const SimpleCollectionTab = <T extends object>({
+    fields,
+    stateSetter,
+    items,
+    title,
+  }: {
+    fields: { key: keyof T; label: string }[];
+    stateSetter: (item: T) => void;
+    items: T[];
+    title: string;
+  }) => {
+    const initial: any = {};
+    fields.forEach(f => (initial[f.key as string] = ""));
+    const [local, setLocal] = useState<T>(initial);
+
+    const add = () => {
+      stateSetter(local);
+      const reset: any = {};
+      fields.forEach(f => (reset[f.key as string] = ""));
+      setLocal(reset);
+    };
+
+    return (
+      <div className="w-full max-w-4xl mx-auto grid gap-4">
+        <Card>
+          <CardContent className="grid md:grid-cols-3 gap-4 p-4">
+            {fields.map(f => (
+              <div key={String(f.key)} className="md:col-span-1">
+                <Label>{f.label}</Label>
+                <Input
+                  value={(local as any)[f.key]}
+                  onChange={e => setLocal({ ...local, [f.key]: e.target.value })}
+                />
+              </div>
+            ))}
+            <Button onClick={add}>Add</Button>
+          </CardContent>
+        </Card>
+        {items.length > 0 && (
+          <Card className="shadow">
+            <CardContent className="p-4 space-y-2">
+              <h3 className="text-lg font-semibold">{title}</h3>
+              <ul className="list-disc pl-4 space-y-1 text-sm">
+                {items.map((it, idx) => (
+                  <li key={idx}>{JSON.stringify(it)}</li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        )}
+      </div>
+    );
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-10">
+      <h1 className="text-3xl font-bold text-center mb-6">Process Mapping Data Collector</h1>
+
+      <Tabs defaultValue="overview" className="w-full">
+        <TabsList className="grid grid-cols-5 mb-4">
+          <TabsTrigger value="overview">Overview</TabsTrigger>
+          <TabsTrigger value="steps">Steps</TabsTrigger>
+          <TabsTrigger value="metrics">Metrics</TabsTrigger>
+          <TabsTrigger value="ideas">AI Ideas</TabsTrigger>
+          <TabsTrigger value="validation">Validation</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="overview"><OverviewTab /></TabsContent>
+        <TabsContent value="steps"><StepsTab /></TabsContent>
+        <TabsContent value="metrics">
+          {SimpleCollectionTab<Metric>({
+            fields: [
+              { key: "metric_name", label: "Metric Name" },
+              { key: "unit", label: "Unit" },
+              { key: "baseline", label: "Baseline Value" },
+              { key: "method", label: "Measurement Method" },
+              { key: "date", label: "Date Collected" },
+            ],
+            stateSetter: addMetric,
+            items: metrics,
+            title: "Metrics Baseline List",
+          })}
+        </TabsContent>
+        <TabsContent value="ideas">
+          {SimpleCollectionTab<AIIdea>({
+            fields: [
+              { key: "title", label: "Idea Title" },
+              { key: "description", label: "Description" },
+              { key: "benefit", label: "Expected Benefit (hrs/€)" },
+              { key: "complexity", label: "Complexity (Low/Med/High)" },
+              { key: "priority", label: "Priority (1‑High, 3‑Low)" },
+            ],
+            stateSetter: addIdea,
+            items: aiIdeas,
+            title: "AI Ideas List",
+          })}
+        </TabsContent>
+        <TabsContent value="validation">
+          {SimpleCollectionTab<ValidationEntry>({
+            fields: [
+              { key: "reviewer", label: "Reviewer" },
+              { key: "date", label: "Date Reviewed" },
+              { key: "comments", label: "Comments" },
+              { key: "confirmed", label: "Confirmed (Y/N)" },
+            ],
+            stateSetter: addValidation,
+            items: validations,
+            title: "Validation Log List",
+          })}
+        </TabsContent>
+      </Tabs>
+
+      <div className="flex justify-center mt-8">
+        <Button disabled={loading} onClick={saveAll} className="px-6 py-2 text-lg">
+          {loading ? "Saving..." : "Save All"}
+        </Button>
+      </div>
+
+      {message && (
+        <div className="text-center mt-4 text-sm font-medium">
+          {message}
+        </div>
+      )}
+    </div>
+  );
+}
