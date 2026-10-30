@@ -12,7 +12,7 @@
 
 **Come funziona.** Quando un vostro cliente ha l'esigenza, me lo segnalate. Io lo contatto, faccio un primo check gratuito di 30 minuti e, se c'è da lavorare, gestisco tutto io tenendovi informati. La relazione con il cliente resta vostra.
 
-**Chi sono.** Michele Leidi, consulente di marketing strategico e trasformazione digitale, docenze universitarie, trent'anni di esperienza. [una riga sul perché l'AI in azienda — da personalizzare]
+**Chi sono.** Michele Leidi, consulente di marketing strategico e trasformazione digitale, autore del libro *"Né mente né macchina"* sull'etica delle intelligenze artificiali, docenze universitarie, trent'anni di esperienza. [una riga sul perché l'AI in azienda — da personalizzare]
 
 **Parliamone.** [contatto] · Bastano venti minuti per capire se ha senso.
 
