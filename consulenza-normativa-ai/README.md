@@ -7,10 +7,12 @@ Servizi di accompagnamento alla compliance sulla normativa AI (AI Act + legge it
 ## Struttura del progetto
 
 - `strategia/piano-marketing.md` — piano strategico: posizionamento, target, canali
+- `strategia/prossimi-passi.md` — cose ancora da fare
 - `materiali/post-linkedin-01.md` — primo post LinkedIn (pronto)
-- `materiali/brochure-commercialisti.md` — mezza pagina per studi commercialisti
+- `materiali/brochure-commercialisti.md` (+ `.pdf`) — mezza pagina per studi commercialisti
+- `materiali/brochure-consulenti-lavoro.md` (+ `.pdf`) — versione gemella per consulenti del lavoro
 - `outreach/email-commercialisti.md` — due varianti email per proporsi come partner agli studi
-- `strategia/prossimi-passi.md` — cose ancora da fare (PDF, versione consulenti del lavoro)
+- `modelli/` — documenti operativi per **eseguire** il servizio (censimento, policy, nomina referente, formazione/attestati, verifica rischio, report finale) — vedi `modelli/README.md`
 
 ## Offerta sintetica
 
