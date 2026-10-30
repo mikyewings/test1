@@ -1,0 +1,21 @@
+# Collaborazione per lo studio: l'adeguamento AI dei vostri clienti
+
+**Il contesto.** Tra AI Act europeo e legge italiana sull'intelligenza artificiale (L. 132/2025, D.Lgs 179/2026), le aziende che usano strumenti come ChatGPT, Claude o Gemini hanno nuovi obblighi già in vigore — tra cui la **formazione obbligatoria del personale** sull'uso dell'AI (art. 42, D.Lgs 179/2026) e il divieto di decidere su assunzioni, provvedimenti disciplinari o valutazioni **solo** con l'AI, pena la nullità della decisione (art. 41, D.Lgs 179/2026). Sono temi che toccano direttamente la gestione del personale, ma che oggi restano scoperti: ai titolari arrivano, ma nessuno nello studio li segue in modo strutturato.
+
+**Cosa faccio.** Accompagno le piccole aziende a mettere in regola e, soprattutto, a mettere ordine nell'uso dell'AI. Un percorso breve e concreto: censimento degli strumenti in uso e del loro rischio, policy d'uso, nomina di un referente interno, formazione del personale con attestazione (l'adempimento richiesto dall'art. 42), verifica su pratiche vietate e privacy — compresi gli aspetti di decisioni automatizzate sul personale (art. 41) e l'aggiornamento del DVR quando l'AI incide su organizzazione del lavoro o sicurezza.
+
+**Perché conviene allo studio.**
+- I vostri clienti trovano una risposta competente a un tema che tocca direttamente la gestione del personale, e che oggi non sanno a chi chiedere.
+- Voi fate bella figura e restate il loro punto di riferimento: la soluzione passa da voi.
+- Nessuna sovrapposizione: io non tocco contrattualistica, paghe o relazioni sindacali. Voi non dovete costruire una competenza nuova.
+- Nessun rischio per lo studio: la responsabilità del progetto di adeguamento è mia.
+
+**Come funziona.** Quando un vostro cliente ha l'esigenza, me lo segnalate. Io lo contatto, faccio un primo check gratuito di 30 minuti e, se c'è da lavorare, gestisco tutto io tenendovi informati. La relazione con il cliente resta vostra.
+
+**Chi sono.** Michele Leidi, consulente di marketing strategico e trasformazione digitale, autore del libro *"Né mente né macchina"* sull'etica delle intelligenze artificiali, docenze universitarie, trent'anni di esperienza. [una riga sul perché l'AI in azienda — da personalizzare]
+
+**Parliamone.** [contatto] · Bastano venti minuti per capire se ha senso.
+
+---
+
+**Nota sul riconoscimento economico**: come per i commercialisti, valgono eventuali vincoli deontologici dello studio. Funziona meglio inquadrarlo come scambio reciproco di segnalazioni o come sconto dedicato ai loro clienti, piuttosto che come percentuale.
