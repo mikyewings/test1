@@ -7,6 +7,7 @@ Servizi di accompagnamento alla compliance sulla normativa AI (AI Act + legge it
 ## Struttura del progetto
 
 - `strategia/piano-marketing.md` — piano strategico: posizionamento, target, canali
+- `strategia/riferimenti-normativi.md` — sintesi degli articoli di legge applicabili (L. 132/2025, D.Lgs 179/2026, D.Lgs 160/2026), con le citazioni usate nei modelli
 - `strategia/prossimi-passi.md` — cose ancora da fare
 - `materiali/post-linkedin-01.md` — primo post LinkedIn (pronto)
 - `materiali/brochure-commercialisti.md` (+ `.pdf`) — mezza pagina per studi commercialisti

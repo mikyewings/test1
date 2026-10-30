@@ -31,7 +31,8 @@ Elenco basato sul censimento effettuato (vedi `01-censimento-strumenti-ai.md`):
 
 - Gli output generati dall'AI vanno sempre controllati da una persona prima di essere usati verso l'esterno (clienti, fornitori, pubblico) o per decisioni rilevanti.
 - L'AI non sostituisce la responsabilità di chi firma o invia un documento: chi usa lo strumento resta responsabile del contenuto finale.
-- Per decisioni che riguardano persone (es. selezione del personale, valutazioni) l'AI può solo supportare, mai sostituire, la decisione umana.
+- **Decisioni sul rapporto di lavoro**: per legge (art. 41, D.Lgs 179/2026), le decisioni finali su costituzione, modifica o risoluzione del rapporto di lavoro — inclusi provvedimenti disciplinari e valutazioni delle prestazioni — non possono mai basarsi unicamente su un trattamento automatizzato. Serve sempre una persona fisica con potere decisionale effettivo. Un licenziamento o altra decisione presa in violazione di questa regola è **nullo**. Il lavoratore ha diritto, su richiesta, a una motivazione intelligibile della decisione.
+- Il datore di lavoro deve inoltre informare il lavoratore dell'uso dell'IA nei casi e con le modalità previste dall'art. 1-bis, D.Lgs 152/1997 (richiamato dall'art. 11, Legge 132/2025), prima di avviare il trattamento.
 
 ## 6. Referente interno
 
@@ -39,9 +40,9 @@ Il referente per l'uso dell'AI in azienda è: **[Nome, ruolo]** (vedi atto di no
 
 Compiti del referente: tenere aggiornato l'elenco degli strumenti autorizzati, valutare richieste di nuovi strumenti, essere punto di contatto per dubbi, organizzare la formazione periodica, segnalare eventuali criticità.
 
-## 7. Formazione
+## 7. Formazione e sicurezza sul lavoro
 
-Tutto il personale che usa strumenti AI riceve una formazione iniziale (vedi `05-registro-e-attestato-formazione.md`) e aggiornamenti periodici quando cambiano strumenti o normativa.
+Tutto il personale che usa strumenti AI riceve una formazione iniziale (vedi `05-registro-e-attestato-formazione.md`) e aggiornamenti periodici quando cambiano strumenti o normativa. Questo non è solo buona prassi: l'art. 42, D.Lgs 179/2026 impone al datore di lavoro di assicurare un'adeguata informazione e formazione sui rischi specifici connessi all'uso dell'IA. Dove l'uso dell'IA incide su organizzazione del lavoro, ritmi o sicurezza, va inoltre valutato nel documento di valutazione dei rischi aziendale (DVR, art. 28, D.Lgs 81/2008) — da coordinare con il responsabile del servizio di prevenzione e protezione (RSPP).
 
 ## 8. Violazioni
 

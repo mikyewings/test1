@@ -44,7 +44,13 @@
 
 (vedi `05-registro-e-attestato-formazione.md` allegato)
 
-## 6. Stato di conformità raggiunto
+## 6. Decisioni sul personale assistite da AI
+
+- L'azienda usa sistemi AI per decisioni su costituzione, modifica o risoluzione di rapporti di lavoro (inclusi provvedimenti disciplinari e valutazioni)? [sì/no]
+- Se sì: verificato che la decisione finale resti sempre a una persona fisica, come richiesto dall'art. 41, D.Lgs 179/2026 (pena la nullità della decisione): [ ]
+- Uso di AI che incide su organizzazione del lavoro, ritmi o sicurezza, segnalato per l'aggiornamento del DVR (art. 42, D.Lgs 179/2026): [ ]
+
+## 7. Stato di conformità raggiunto
 
 | Area | Stato |
 |---|---|
@@ -55,13 +61,13 @@
 | Verifica pratiche vietate | ✅ Nessuna criticità / ⚠️ Vedi punto 2 |
 | Privacy | ✅ / ⚠️ [dettaglio] |
 
-## 7. Raccomandazioni e prossimi passi
+## 8. Raccomandazioni e prossimi passi
 
 - [ ] Rivedere la policy tra [X mesi] o all'introduzione di nuovi strumenti
 - [ ] Programmare un refresh formativo annuale
 - [ ] [Altre raccomandazioni specifiche emerse dal percorso]
 
-## 8. Presidio continuativo
+## 9. Presidio continuativo
 
 Per restare il punto di riferimento sull'uso dell'AI in azienda oltre questo primo adeguamento, si propone: [es. check periodico trimestrale/semestrale, aggiornamento su novità normative, supporto on-demand al referente interno].
 

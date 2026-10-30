@@ -14,7 +14,7 @@ Partire dalla **Versione A**; introdurre la Versione B solo se il rapporto si co
 
 Ciao [Nome],
 
-ti scrivo perché immagino che il tema dell'adeguamento all'AI Act e alla legge italiana sull'intelligenza artificiale ti stia già arrivando addosso da qualche cliente, senza che rientri nel vostro lavoro.
+ti scrivo perché immagino che il tema dell'adeguamento all'AI Act e alla legge italiana sull'intelligenza artificiale ti stia già arrivando addosso da qualche cliente, senza che rientri nel vostro lavoro. (Tra l'altro vi riguarda direttamente anche come studio: l'art. 47 del D.Lgs 179/2026 chiede agli ordini professionali di includere la formazione sull'AI nella formazione continua obbligatoria.)
 
 Da un po' accompagno piccole aziende a mettere in regola — e soprattutto a mettere ordine — nell'uso che fanno di strumenti come ChatGPT, Claude o Gemini: censimento di cosa usano davvero, policy, un referente interno, formazione con attestazione.
 

@@ -36,6 +36,10 @@ Criteri orientativi per "alto rischio" (lista non esaustiva, da verificare sui c
 - [ ] I dati inseriti potrebbero includere categorie particolari (dati sanitari, biometrici, ecc.)?
 - [ ] È necessaria una valutazione d'impatto (DPIA) per questo trattamento? [sì/no/da verificare con DPO]
 
+## Perché compilare questa checklist (non solo burocrazia)
+
+In caso di contenzioso per danni da uso di un sistema IA, l'art. 18, D.Lgs 160/2026 **presume il nesso di causalità** tra la violazione di un obbligo del regolamento IA e il danno, salvo prova contraria a carico dell'azienda. L'art. 17 dello stesso decreto permette al giudice di ordinare l'esibizione dei registri di funzionamento e della documentazione di gestione del rischio. Questa checklist, insieme al censimento e alla policy, **è la prova della diligenza dell'azienda**: conservarla con cura.
+
 ## Esito complessivo
 
 - Strumenti bloccati per pratica vietata: [ ]

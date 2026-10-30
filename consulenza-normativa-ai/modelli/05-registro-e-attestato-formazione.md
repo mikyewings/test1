@@ -2,6 +2,8 @@
 
 ## Parte 1 — Registro della sessione formativa
 
+> Base legale: art. 42, comma 3, D.Lgs 179/2026 — il datore di lavoro deve assicurare un'adeguata informazione e formazione dei lavoratori sui rischi specifici connessi all'uso dei sistemi di IA e sulle misure di prevenzione adottate. Questo registro ne documenta l'adempimento.
+
 **Azienda**: [Nome azienda] · **Data**: [Data] · **Durata**: [es. 2 ore] · **Formatore**: [Nome]
 
 **Argomenti trattati**:

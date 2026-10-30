@@ -16,6 +16,8 @@ Con il presente atto nomina:
 4. Essere punto di contatto interno per dubbi e segnalazioni relative all'uso dell'AI
 5. Organizzare o coordinare la formazione periodica del personale sull'uso dell'AI
 6. Segnalare tempestivamente alla direzione eventuali criticità, incidenti o usi non conformi
+7. Verificare che nessuno strumento AI sia usato per decidere, da solo, su costituzione, modifica o risoluzione di un rapporto di lavoro (provvedimenti disciplinari e valutazioni incluse) — per legge (art. 41, D.Lgs 179/2026) la decisione finale spetta sempre a una persona
+8. Segnalare al responsabile del servizio di prevenzione e protezione (RSPP) gli usi di AI che incidono su organizzazione del lavoro, ritmi o sicurezza, ai fini dell'aggiornamento del DVR (art. 42, D.Lgs 179/2026)
 
 ## Durata
 
