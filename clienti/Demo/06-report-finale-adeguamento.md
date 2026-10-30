@@ -1,0 +1,76 @@
+# Report finale — Percorso di adeguamento AI
+
+**Cliente**: Demo S.r.l. · **Periodo del percorso**: 05/11/2026 - 18/12/2026 · **A cura di**: [Nome consulente]
+
+## Executive summary
+
+[3-5 righe: cosa è stato fatto, risultato principale, stato di conformità raggiunto, eventuali punti aperti]
+
+## 1. Censimento degli strumenti AI
+
+- Strumenti censiti: [numero]
+- Sintesi: [vedi `01-censimento-strumenti-ai.md` allegato]
+- Principali aree di esposizione emerse: [ ]
+
+## 2. Verifica pratiche vietate e classificazione del rischio
+
+- Esito: nessuna pratica vietata riscontrata / [dettaglio se riscontrata e come è stata risolta]
+- Strumenti classificati come rischio limitato: [ ]
+- Strumenti classificati come rischio minimo: [ ]
+- Eventuali strumenti segnalati per approfondimento con legale/DPO: [ ]
+
+(vedi `02-checklist-pratiche-vietate-e-rischio.md` allegato)
+
+## 3. Policy aziendale
+
+- Policy adottata in data: 01/12/2026
+- Approvata da: Laura Bianchi, Amministratrice unica
+- Principali regole introdotte: [elenco strumenti autorizzati, regole sui dati, verifica umana — sintesi]
+
+(vedi `03-policy-uso-ai-aziendale.md` allegato)
+
+## 4. Referente interno
+
+- Nominato: Marco Rossi, Responsabile amministrazione e IT
+- Data nomina: 01/12/2026
+
+(vedi `04-nomina-referente-ai.md` allegato)
+
+## 5. Formazione
+
+- Data/e sessione/i: 10/12/2026
+- Numero partecipanti: [ ] su [totale personale interessato]
+- Attestati rilasciati: [ ]
+
+(vedi `05-registro-e-attestato-formazione.md` allegato)
+
+## 6. Decisioni sul personale assistite da AI
+
+- L'azienda usa sistemi AI per decisioni su costituzione, modifica o risoluzione di rapporti di lavoro (inclusi provvedimenti disciplinari e valutazioni)? [sì/no]
+- Se sì: verificato che la decisione finale resti sempre a una persona fisica, come richiesto dall'art. 41, D.Lgs 179/2026 (pena la nullità della decisione): [ ]
+- Uso di AI che incide su organizzazione del lavoro, ritmi o sicurezza, segnalato per l'aggiornamento del DVR (art. 42, D.Lgs 179/2026): [ ]
+
+## 7. Stato di conformità raggiunto
+
+| Area | Stato |
+|---|---|
+| Censimento strumenti | ✅ Completato |
+| Policy d'uso | ✅ Adottata |
+| Referente interno | ✅ Nominato |
+| Formazione personale | ✅ Erogata |
+| Verifica pratiche vietate | ✅ Nessuna criticità / ⚠️ Vedi punto 2 |
+| Privacy | ✅ / ⚠️ [dettaglio] |
+
+## 8. Raccomandazioni e prossimi passi
+
+- [ ] Rivedere la policy tra [X mesi] o all'introduzione di nuovi strumenti
+- [ ] Programmare un refresh formativo annuale
+- [ ] [Altre raccomandazioni specifiche emerse dal percorso]
+
+## 9. Presidio continuativo
+
+Per restare il punto di riferimento sull'uso dell'AI in azienda oltre questo primo adeguamento, si propone: [es. check periodico trimestrale/semestrale, aggiornamento su novità normative, supporto on-demand al referente interno].
+
+---
+
+Consegnato a: Laura Bianchi, Amministratrice unica — Data: 18/12/2026
