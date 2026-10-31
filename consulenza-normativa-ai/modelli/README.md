@@ -15,5 +15,5 @@ Ogni modello è disponibile in Markdown (sorgente) e `.docx` (versione Word pron
 5. `04-nomina-referente-ai` — atto di nomina del referente interno
 6. `05-registro-e-attestato-formazione` — registro presenze + attestato individuale
 7. `06-report-finale-adeguamento` — sintesi del percorso, consegnata al cliente a chiusura progetto
-8. `07-slide-alfabetizzazione-formazione.md` — link e struttura del set di slide per la sessione di formazione (deck interattivo, non un file statico)
+8. `07-slide-alfabetizzazione-formazione` (+.pptx) — set di slide per la sessione di formazione, con note del relatore; anche come deck interattivo online
 9. `08-questionario-censimento-ia.md` — questionario web da inviare ai dipendenti **prima** dell'avvio (vedi punto 2), per capire quali strumenti usano davvero e con quali dati
