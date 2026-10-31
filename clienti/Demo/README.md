@@ -40,8 +40,8 @@ Copia dei modelli di `consulenza-normativa-ai/modelli/`, personalizzata per un c
 
 Sono stati compilati solo i dati anagrafici, i contatti e le date. Restano volutamente tra `[parentesi quadre]`:
 
-- **nome del consulente/formatore** (01, 04, 05, 06);
+- **nome del consulente/formatore** (01, 04, 05, 06, 07);
 - **risultati del percorso**: righe del censimento, esiti della checklist, strumenti autorizzati, numero partecipanti, sintesi e raccomandazioni del report;
 - **nominativi dei partecipanti** negli attestati (05, uno per persona) e la durata della formazione.
 
-I file `07` e `08` sono copiati senza modifiche: puntano ad artifact condivisi (deck e questionario), che vanno personalizzati direttamente sulla pagina.
+`07-slide-alfabetizzazione-formazione.pptx` è la versione PowerPoint del deck di formazione, ricostruita dal deck online (stessi testi, colori e note del relatore) e personalizzata con azienda, data della formazione e referente. Restano da compilare il nome e il contatto del formatore. Il file `08` (questionario web) è copiato senza modifiche.
