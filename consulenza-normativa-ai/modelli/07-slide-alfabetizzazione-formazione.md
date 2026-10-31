@@ -2,9 +2,11 @@
 
 Set di slide di supporto alla sessione di formazione prevista dal percorso (vedi `05-registro-e-attestato-formazione.md`), costruito con il design system del cliente ("Essenziale").
 
-**Link al deck**: https://claude.ai/artifact/BNoqPWZEPDFH44XQVvYZPk
+**File**: [`07-slide-alfabetizzazione-formazione.pptx`](07-slide-alfabetizzazione-formazione.pptx) — stesso contenuto, pronto da aprire e modificare in PowerPoint/LibreOffice/Keynote, incluse le note del relatore.
 
-> Il link è privato: va condiviso dal menu "Share" della pagina prima di usarlo con altri (es. inviarlo al formatore o al cliente). Da lì si può anche esportare in PDF o PowerPoint per presentarlo offline.
+**Link al deck originale (editabile online)**: https://claude.ai/artifact/BNoqPWZEPDFH44XQVvYZPk
+
+> Il link è privato: va condiviso dal menu "Share" della pagina prima di usarlo con altri (es. inviarlo al formatore o al cliente). Da lì si può anche esportare in PDF o PowerPoint per presentarlo offline — il file `.pptx` tra i modelli è già quell'esportazione, pronta all'uso senza bisogno di aprire il link.
 
 ## Struttura (12 slide)
 
